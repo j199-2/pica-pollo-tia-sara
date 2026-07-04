@@ -79,7 +79,7 @@
         loadCartSidebar();
 
         // Pedimos los datos del menú usando fetch (compatible con GitHub Pages)
-        fetch('/src/data/menu.json')
+        fetch('../../data/menu.json')
             .then(response => response.json())
             .then(menuData => {
                 const grid = document.getElementById('productsGrid');
