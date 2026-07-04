@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tía Sara - Sucursal Centro",
+    "direccion": "Calle Martí #123, entre San Pedro y San Pablo",
+    "horario": "Lun - Dom: 11:00 AM - 10:00 PM",
+    "telefono": "+53 5555 1234",
+    "whatsapp": "5355551234",
+    "latitud": 20.1234,
+    "longitud": -75.1234
+  },
+  {
+    "id": 2,
+    "nombre": "Tía Sara - Sucursal Norte",
+    "direccion": "Avenida Forestal, Frente al Parque de la Maestranza",
+    "horario": "Lun - Dom: 12:00 PM - 11:00 PM",
+    "telefono": "+53 5555 9876",
+    "whatsapp": "5355559876",
+    "latitud": 20.1500,
+    "longitud": -75.1000
+  }
+]
