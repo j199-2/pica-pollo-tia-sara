@@ -1,0 +1,32 @@
+<nav class="navbar">
+    <div class="container nav-container">
+        <!-- Logo -->
+        <a href="../home/index.html" class="nav-logo">
+            <!-- Si no existe la imagen aún, mostrará el texto completo -->
+            <img src="../../public/assets/logos/tia-sara-logo.png" alt="Logo Pica Pollo Tía Sara" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span class="nav-logo-text" style="display:none; font-family: var(--font-heading); color: var(--color-primary); font-size: 1.2rem; font-weight: 800;">Pica Pollo Tía Sara</span>
+        </a>
+        
+        <!-- Enlaces de navegación -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../home/index.html">Inicio</a></li>
+            <li><a href="../menu/index.html">Menú</a></li>
+            <li><a href="../sucursales/index.html">Sucursales</a></li>
+            <li><a href="../nosotros/index.html">Nosotros</a></li>
+            <li><a href="../franquicias/index.html" class="btn">Sé Franquiciatario</a></li>
+        </ul>
+
+        <!-- Iconos de acción -->
+        <div class="nav-actions">
+            <!-- Botón del carrito (lo activaremos más tarde) -->
+            <button class="cart-toggle" id="cartToggle" aria-label="Ver carrito">
+                🛒 <span id="cartCount" style="background:var(--color-primary); color:white; border-radius:50%; padding:2px 6px; font-size:0.7rem;">0</span>
+            </button>
+
+            <!-- Botón menú hamburguesa para celulares -->
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
