@@ -1,0 +1,80 @@
+/* Importamos las variables (colores y fuentes) que creamos en el paso anterior */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap');
+@import './variables.css';
+
+/* Reseteo básico para todos los navegadores */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Enlaces y listas */
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* Imágenes */
+img { max-width: 100%; height: auto; display: block; }
+
+/* =========================================
+   CLASES UTILITARIAS (Las usaremos mucho)
+   ========================================= */
+
+/* Contenedor principal para centrar el contenido */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Botón principal (Amarillo) */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Botón secundario (Rojo) */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
