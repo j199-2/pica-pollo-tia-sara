@@ -8,7 +8,7 @@ export function createProductCard(product) {
     <div class="product-card">
         <div class="product-card-image">
             <!-- Si la foto real no existe, muestra un cuadro rojo con el nombre del plato -->
-            <img src="../../public/${product.imagen}" 
+           <img src="/public/${product.imagen}"
                  alt="${product.nombre}" 
                  onerror="this.src='https://placehold.co/400x300/D32F2F/FFFFFF?text=${encodeURIComponent(product.nombre)}'">
         </div>
