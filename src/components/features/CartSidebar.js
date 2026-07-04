@@ -7,7 +7,7 @@ let cart = [];
 window.addToCart = async function(productId) {
     // Si el carrito está vacío o no sabemos los productos, pedimos el JSON
     if (window.allMenuData === undefined) {
-        const response = await fetch('/src/data/menu.json');
+        const response = await fetch('../../data/menu.json')
         window.allMenuData = await response.json();
     }
     
