@@ -1,15 +1,20 @@
-import { generateWhatsAppLink } from '../../utils/whatsappLink.js';
-import menuData from '../../data/menu.json' assert { type: "json" };
+window.addToCart = function(productId) {
 
 // Estado global del carrito (arreglo temporal en la memoria)
 let cart = [];
 
-// Hacemos que la función esté disponible globalmente para los botones "Añadir" de las tarjetas
-window.addToCart = function(productId) {
-    const product = menuData.find(p => p.id === productId);
+// Hacemos que la función esté disponible globalmente para los botones de las tarjetas
+window.addToCart = async function(productId) {
+    // Si el carrito está vacío o no sabemos los productos, pedimos el JSON
+    if (window.allMenuData === undefined) {
+        const response = await fetch('/src/data/menu.json');
+        window.allMenuData = await response.json();
+    }
+    
+    const product = window.allMenuData.find(p => p.id === productId);
     if (!product) return;
 
-    // Verificamos si el producto ya está en el carrito para sumar cantidad
+    // Verificamos si ya está en el carrito para sumar cantidad
     const existingItem = cart.find(item => item.id === productId);
     
     if (existingItem) {
@@ -19,7 +24,7 @@ window.addToCart = function(productId) {
     }
     
     renderCart();
-    openCart(); // Abre el carrito automáticamente al añadir algo
+    openCart(); // Abre el carrito automáticamente
 };
 
 // Función para inyectar la estructura HTML del carrito en la página
