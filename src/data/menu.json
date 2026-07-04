@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pechurina Clásica",
+    "descripcion": "Crujiente por fuera, jugosa por dentro. Nuestra receta original.",
+    "precio": 5.50,
+    "imagen": "assets/images/pechurina-clasica.jpg",
+    "categoria": "picas",
+    "sucursales": [1, 2]
+  },
+  {
+    "id": 2,
+    "nombre": "Pechurina Especial (Con queso y jamón)",
+    "descripcion": "La favorita de los clientes exigentes.",
+    "precio": 7.00,
+    "imagen": "assets/images/pechurina-especial.jpg",
+    "categoria": "picas",
+    "sucursales": [1]
+  },
+  {
+    "id": 3,
+    "nombre": "Combo Familiar (4 personas)",
+    "descripcion": "8 presas de pollo, papas fritas grandes, 4 refrescos y ensalada criolla.",
+    "precio": 25.00,
+    "imagen": "assets/images/combo-familiar.jpg",
+    "categoria": "combos",
+    "sucursales": [1, 2]
+  },
+  {
+    "id": 4,
+    "nombre": "Refresco de 2 Litros",
+    "descripcion": "Coca-Cola, Fanta o Sprite bien frío.",
+    "precio": 3.50,
+    "imagen": "assets/images/refresco.jpg",
+    "categoria": "bebidas",
+    "sucursales": [1, 2]
+  }
+]
