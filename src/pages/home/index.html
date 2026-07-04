@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pica Pollo Tía Sara - El Sabor Criollo</title>
+    <!-- Llamamos a los estilos -->
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    
+    <!-- Aquí aparecerá el menú de navegación automáticamente -->
+    <div id="navbar-placeholder"></div>
+    
+    <main>
+        <!-- SECCIÓN PRINCIPAL (Bienvenida) -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>El verdadero sabor criollo</h1>
+                <p>Pechurinas crujientes, combos familiares y ese sazón inconfundible que solo encuentras en Pica Pollo Tía Sara.</p>
+                <a href="../menu/index.html" class="btn">Ver Menú</a>
+            </div>
+        </section>
+
+        <!-- PLATOS DESTACADOS -->
+        <section class="container section-featured">
+            <h2>Nuestros Favoritos</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Aquí el JavaScript dibujará las tarjetas de comida -->
+            </div>
+        </section>
+
+        <!-- ¿POR QUÉ ELEGIRNOS? -->
+        <section class="section-why-us">
+            <div class="container">
+                <h2>¿Por qué elegirnos?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">🍗</span>
+                        <h3>Calidad Premium</h3>
+                        <p>Pollo fresco seleccionado diario, preparado con recetas de familia.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <h3>Rapidez Garantizada</h3>
+                        <p>Sabemos que tienes hambre, tu pedido estará listo en minutos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">❤️</span>
+                        <h3>Tradición</h3>
+                        <p>Años llevando alegría y buen sabor a cada mesa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Pica Pollo Tía Sara. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Aquí aparecerá el carrito de compras lateral -->
+    <div id="cart-placeholder"></div>
+
+    <!-- LÓGICA DE LA PÁGINA -->
+    <script type="module">
+        // Importamos las piezas que construimos antes
+        import { loadNavbar } from '../../components/common/Navbar.js';
+        import { loadCartSidebar } from '../../components/features/CartSidebar.js';
+        import { createProductCard } from '../../components/ui/ProductCard.js';
+        import menuData from '../../data/menu.json' assert { type: "json" };
+
+        // Encendemos el menú y el carrito
+        loadNavbar();
+        loadCartSidebar();
+
+        // Tomamos los primeros 3 productos de nuestro JSON y los mostramos en el inicio
+        const grid = document.getElementById('productsGrid');
+        const featuredProducts = menuData.slice(0, 3); 
+        
+        grid.innerHTML = featuredProducts.map(product => createProductCard(product)).join('');
+    </script>
+</body>
+</html>
