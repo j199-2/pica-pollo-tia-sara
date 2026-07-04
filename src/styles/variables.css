@@ -1,0 +1,25 @@
+:root {
+  /* Colores de Marca - Pica Pollo Tía Sara */
+  --color-primary: #D32F2F;       /* Rojo principal */
+  --color-primary-dark: #B71C1C;  /* Rojo oscuro (para cuando pasas el mouse) */
+  --color-secondary: #FBC02D;     /* Amarillo mostaza/dorado */
+  --color-secondary-light: #FFF9C4; /* Amarillo muy claro (fondos suaves) */
+  --color-background: #FFFFFF;
+  --color-text: #333333;
+  --color-text-light: #757575;
+  
+  /* Tipografía */
+  --font-main: 'Poppins', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+
+  /* Sombras y Bordes */
+  --shadow-card: 0 4px 6px rgba(0,0,0,0.1);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+}
