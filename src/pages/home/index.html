@@ -67,22 +67,26 @@
     <div id="cart-placeholder"></div>
 
     <!-- LÓGICA DE LA PÁGINA -->
+      <!-- LÓGICA DE LA PÁGINA -->
     <script type="module">
-        // Importamos las piezas que construimos antes
+        // Importamos SOLO los componentes visuales
         import { loadNavbar } from '../../components/common/Navbar.js';
         import { loadCartSidebar } from '../../components/features/CartSidebar.js';
         import { createProductCard } from '../../components/ui/ProductCard.js';
-        import menuData from '../../data/menu.json' assert { type: "json" };
 
-        // Encendemos el menú y el carrito
+        // Iniciamos el menú y el carrito
         loadNavbar();
         loadCartSidebar();
 
-        // Tomamos los primeros 3 productos de nuestro JSON y los mostramos en el inicio
-        const grid = document.getElementById('productsGrid');
-        const featuredProducts = menuData.slice(0, 3); 
-        
-        grid.innerHTML = featuredProducts.map(product => createProductCard(product)).join('');
+        // Pedimos los datos del menú usando fetch (compatible con GitHub Pages)
+        fetch('/src/data/menu.json')
+            .then(response => response.json())
+            .then(menuData => {
+                const grid = document.getElementById('productsGrid');
+                const featuredProducts = menuData.slice(0, 3); 
+                grid.innerHTML = featuredProducts.map(product => createProductCard(product)).join('');
+            })
+            .catch(error => console.error("Error cargando el menú:", error));
     </script>
 </body>
 </html>
